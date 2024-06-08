@@ -1,0 +1,12 @@
+- name: common | update system
+  become: true
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+
+- name: common | install packages
+  become: true
+  community.general.pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ common_package_list }}"

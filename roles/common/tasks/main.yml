@@ -1,0 +1,4 @@
+- name: common | setup basic system
+  import_tasks: roles/common/tasks/system.yml
+
+# - setup specific packages
