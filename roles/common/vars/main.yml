@@ -1,2 +1,32 @@
-common_package_list:
+common_utilities_package_list:
+  - base-devel
   - git
+  - ripgrep
+  - rsync
+  - stow
+  - unzip
+  - zip
+
+common_audio_package_list:
+  - pipewire
+  - wireplumber
+  - pipewire-audio
+  - pipewire-alsa
+  - pipewire-pulse
+  - pipewire-jack
+  - pavucontrol
+
+common_bluetooth_package_list:
+  - bluez
+  - bluez-utils
+  - blueman
+
+common_shell_package_list:
+  - zsh
+  - kitty
+
+common_font_package_list:
+
+common_dev_package_list:
+
+common_tools_package_list:

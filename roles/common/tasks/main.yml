@@ -1,4 +1,8 @@
-- name: common | setup basic system
-  import_tasks: roles/common/tasks/system.yml
+- name: common setup
+  block:
+    - import_tasks: ./system.yml
+    - import_tasks: ./audio.yml
+    - import_tasks: ./bluetooth.yml
+    - import_tasks: ./shell.yml
 
 # - setup specific packages
