@@ -4,6 +4,5 @@
 sudo pacman -Sy --noconfirm
 sudo pacman -S ansible sudo --noconfirm
 
-# -K: --ask-become-pass
-ansible-pull -K -U https://github.com/j-milkovits/ansible-arch-desktop
+ansible-playbook local.yml --ask-become-pass
 
