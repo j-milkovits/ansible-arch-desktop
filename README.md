@@ -19,7 +19,7 @@ chmod a+x install_remote.sh && ./install_remote.sh
 3. Type in sudo password when prompted (`BECOME password:`)
 4. Wait until the installation is finished
 ## Testing
-> currently performed using a archlinux container
+> currently performed using a archlinux container  
 > warning: some functions like `servicectl enable ...` will be problematic
 1. Build the docker container using the Dockerfile
 ```
