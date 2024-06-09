@@ -1,0 +1,6 @@
+- name: install font packages 
+  become: true
+  community.general.pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ common_font_package_list }}"

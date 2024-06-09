@@ -28,6 +28,9 @@ common_shell_package_list:
   - kitty
 
 common_font_package_list:
+  - ttf-font-awesome
+  - noto-fonts
+  - noto-fonts-emoji
 
 common_dev_package_list:
 
