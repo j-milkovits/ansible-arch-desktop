@@ -1,5 +1,6 @@
 # Automation of desktop setup using Ansible
 ## Setup
+> the install scripts assume that they are ran as the your user (not root)
 ### Setup with cloning
 > recommend: provides intermediate feedback after every task 
 1. Install Arch (Create User (wheel) | Setup Network)
@@ -21,15 +22,7 @@ chmod a+x install_remote.sh && ./install_remote.sh
 ## Testing
 > currently performed using a archlinux container  
 > warning: some functions like `servicectl enable ...` will be problematic
-1. Build the docker container using the Dockerfile
+1. Execute the script that builds and starts the docker container
 ```
-docker build <container_name> .
-```
-2. Start the docker container
-```
-docker run -it --rm <container_name> bash
-```
-3. Run the install script
-```
-./install.sh
+chmod a+x build_and_run_docker.sh && ./build_and_run_docker.sh
 ```

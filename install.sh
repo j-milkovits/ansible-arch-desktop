@@ -4,5 +4,6 @@
 sudo pacman -Sy --noconfirm
 sudo pacman -S ansible sudo --noconfirm
 
-ansible-playbook local.yml --ask-become-pass
+USERNAME=$(whoami)
 
+ansible-playbook local.yml --ask-become-pass -e "username=$USERNAME"
