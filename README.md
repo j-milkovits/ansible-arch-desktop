@@ -26,3 +26,7 @@ chmod a+x install_remote.sh && ./install_remote.sh
 ```
 chmod a+x build_and_run_docker.sh && ./build_and_run_docker.sh
 ```
+2. Run the install script inside the docker container
+```
+./install.sh
+```
