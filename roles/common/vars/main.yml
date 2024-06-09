@@ -1,5 +1,7 @@
 common_utilities_package_list:
   - base-devel
+  - curl
+  - fzf
   - git
   - ripgrep
   - rsync
