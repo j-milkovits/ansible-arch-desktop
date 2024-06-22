@@ -9,7 +9,7 @@
   community.general.pacman:
     name: "{{ item }}"
     state: present
-  with_items: "{{ common_utilities_package_list }}"
+  with_items: "{{ base_utilities_package_list }}"
 
 - name: clone yay repository
   git:

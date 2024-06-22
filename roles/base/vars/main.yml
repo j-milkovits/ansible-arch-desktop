@@ -1,4 +1,4 @@
-common_utilities_package_list:
+base_utilities_package_list:
   - base-devel
   - curl
   - fzf
@@ -9,7 +9,7 @@ common_utilities_package_list:
   - unzip
   - zip
 
-common_audio_package_list:
+base_audio_package_list:
   - pipewire
   - wireplumber
   - pipewire-audio
@@ -18,20 +18,14 @@ common_audio_package_list:
   - pipewire-jack
   - pavucontrol
 
-common_bluetooth_package_list:
+base_bluetooth_package_list:
   - bluez
   - bluez-utils
   - blueman
 
-common_shell_package_list:
+base_shell_package_list:
   - zsh
   - kitty
 
-common_font_package_list:
-  - ttf-font-awesome
-  - noto-fonts
+base_font_package_list:
   - noto-fonts-emoji
-
-common_dev_package_list:
-
-common_tools_package_list:

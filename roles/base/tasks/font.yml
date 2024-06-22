@@ -3,4 +3,4 @@
   community.general.pacman:
     name: "{{ item }}"
     state: present
-  with_items: "{{ common_font_package_list }}"
+  with_items: "{{ base_font_package_list }}"

@@ -3,7 +3,7 @@
   community.general.pacman:
     name: "{{ item }}"
     state: present
-  with_items: "{{ common_bluetooth_package_list }}"
+  with_items: "{{ base_bluetooth_package_list }}"
 
 - name: enable bluetooth service
   become: true
