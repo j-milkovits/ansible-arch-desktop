@@ -1,13 +1,13 @@
-- name: install shell packages 
+- name: shell | install packages
   become: true
   community.general.pacman:
     name: "{{ item }}"
     state: present
   with_items: "{{ base_shell_package_list }}"
 
-- name: change default shell to zsh for "{{ username }}"
+- name: shell | change default to zsh for "{{ username }}"
   become: true
   shell: chsh -s /usr/bin/zsh {{ username }}
 
-- name: install oh-my-zsh
+- name: shell | install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

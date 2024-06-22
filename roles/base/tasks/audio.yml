@@ -1,4 +1,4 @@
-- name: install audio packages 
+- name: audio | install packages
   become: true
   community.general.pacman:
     name: "{{ item }}"

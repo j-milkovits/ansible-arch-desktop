@@ -7,25 +7,26 @@ base_utilities_package_list:
   - rsync
   - stow
   - unzip
+  - wget
   - zip
 
 base_audio_package_list:
+  - pavucontrol
   - pipewire
-  - wireplumber
   - pipewire-audio
   - pipewire-alsa
   - pipewire-pulse
   - pipewire-jack
-  - pavucontrol
+  - wireplumber
 
 base_bluetooth_package_list:
+  - blueman
   - bluez
   - bluez-utils
-  - blueman
 
 base_shell_package_list:
-  - zsh
   - kitty
+  - zsh
 
 base_font_package_list:
   - noto-fonts-emoji

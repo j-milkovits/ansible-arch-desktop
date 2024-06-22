@@ -1,4 +1,4 @@
-- name: install font packages 
+- name: font | install packages
   become: true
   community.general.pacman:
     name: "{{ item }}"

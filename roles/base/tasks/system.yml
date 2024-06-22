@@ -1,29 +1,29 @@
-- name: update system
+- name: system | update
   become: true
   community.general.pacman:
     update_cache: true
     upgrade: true
 
-- name: install utility packages 
+- name: system | install utility packages 
   become: true
   community.general.pacman:
     name: "{{ item }}"
     state: present
   with_items: "{{ base_utilities_package_list }}"
 
-- name: clone yay repository
+- name: system | clone yay repository
   git:
     repo: 'https://aur.archlinux.org/yay.git'
     dest: /tmp/yay
     clone: yes
     update: no
 
-- name: build and install yay
+- name: system | build and install yay
   command: makepkg -si --noconfirm
   args:
     chdir: /tmp/yay
 
-- name: clean up yay build directory
+- name: system | clean up yay build directory
   file:
     path: /tmp/yay
     state: absent

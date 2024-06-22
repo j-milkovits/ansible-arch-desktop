@@ -1,18 +1,18 @@
-- name: install bluetooth packages 
+- name: bluetooth | install packages 
   become: true
   community.general.pacman:
     name: "{{ item }}"
     state: present
   with_items: "{{ base_bluetooth_package_list }}"
 
-- name: enable bluetooth service
+- name: bluetooth | start service
   become: true
   ansible.builtin.systemd_service:
     name: bluetooth
     enabled: true
     masked: no
 
-- name: start bluetooth service
+- name: bluetooth | enable service
   become: true
   ansible.builtin.systemd_service:
     name: bluetooth

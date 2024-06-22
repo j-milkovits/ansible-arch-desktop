@@ -1,8 +1,7 @@
-- name: common setup
+- name: base setup
   block:
     - import_tasks: ./system.yml
     - import_tasks: ./audio.yml
     - import_tasks: ./bluetooth.yml
     - import_tasks: ./shell.yml
-
-# - setup specific packages
+    - import_tasks: ./font.yml
