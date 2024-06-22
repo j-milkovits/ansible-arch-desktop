@@ -1,7 +1,8 @@
 FROM archlinux:latest
 
+ # install packages when building to save some time
 RUN pacman -Sy --noconfirm && \
-    pacman -S sudo --noconfirm && \
+    pacman -S sudo ansible dialog --noconfirm && \
     useradd -m jonas && \
     echo 'jonas:sudo_pw' | chpasswd && \
     usermod -aG wheel jonas && \

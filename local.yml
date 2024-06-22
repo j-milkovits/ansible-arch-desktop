@@ -1,3 +1,10 @@
-- hosts: localhost
-  roles:
-    - common
+- name: execution started
+  hosts: localhost
+  tasks:
+    - name: roles | dynamic execution
+      include_role:
+        name: "{{ role }}"
+      loop: "{{ roles_to_execute | split(',') }}"
+      loop_control:
+        loop_var: role
+
