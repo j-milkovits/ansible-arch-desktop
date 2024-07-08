@@ -1,0 +1,6 @@
+- name: tools | install packages
+  become: true
+  community.general.pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ development_tools_package_list }}"

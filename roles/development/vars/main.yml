@@ -1,0 +1,12 @@
+development_docker_package_list:
+  - docker
+  - docker-compose
+
+development_tools_package_list:
+  - neovim
+  - python
+  - python-pip
+  - poetry
+  - nodejs
+  - npm
+  - dbeaver

@@ -1,0 +1,6 @@
+- name: development
+  block:
+    - import_tasks: ./tools.yml
+    - import_tasks: ./docker.yml
+    - import_tasks: ./git.yml
+
