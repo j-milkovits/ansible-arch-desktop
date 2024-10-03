@@ -1,4 +1,4 @@
-- name: base setup
+- name: base
   block:
     - import_tasks: ./system.yml
     - import_tasks: ./audio.yml
