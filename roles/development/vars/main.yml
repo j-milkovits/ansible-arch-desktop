@@ -10,3 +10,4 @@ development_tools_package_list:
   - nodejs
   - npm
   - dbeaver
+  - git
