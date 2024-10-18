@@ -5,8 +5,8 @@ sudo pacman -Sy --noconfirm
 sudo pacman -S ansible sudo --noconfirm
 
 # --- ROLES ---
-OPTIONS=("base" "development" "wayland") # options for roles
-SELECTED=("x" "x" "x") # save selected roles
+OPTIONS=("development" "dotfiles" "tools" "wayland" "nvidia" "gaming") # options for roles
+SELECTED=("x" "x" "x" "x" "x" " ") # save selected roles
 highlight=0 # initial highlight position
 done=false # done flag
 
@@ -69,6 +69,7 @@ done
 
 clear
 echo "The following roles will be installed:"
+echo "- base"
 ROLES=()
 for i in "${!OPTIONS[@]}"; do
   if [[ ${SELECTED[$i]} == "x" ]]; then
@@ -88,7 +89,10 @@ if [[ " ${ROLES[@]} " =~ " ${search_string} " ]]; then
 fi
 
 # convert bash array to comma-separated string
-roles_to_execute=$(IFS=,; echo "${ROLES[*]}")
+# base is always included
+roles_to_execute="base,$(IFS=,; echo "${ROLES[*]}")"
+
+echo "${roles_to_execute}"
 
 ansible-playbook local.yml \
   --ask-become-pass \

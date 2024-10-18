@@ -1,6 +1,6 @@
 # Automation of desktop setup using Ansible
 ## Setup
-> the install scripts assume that they are ran as the your user (not root)
+> the install scripts assume that they are ran as your user (not root)
 ### Setup with cloning
 > recommend: provides intermediate feedback after every task 
 1. Install Arch (Create User (wheel) | Setup Network)
