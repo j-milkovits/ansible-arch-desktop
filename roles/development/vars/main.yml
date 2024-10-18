@@ -6,6 +6,7 @@ development_tools_package_list:
   - neovim
   - python
   - python-pip
+  - geckodriver
   - poetry
   - nodejs
   - npm
