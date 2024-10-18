@@ -1,0 +1,6 @@
+- name: tools 
+  block:
+    - import_tasks: ./entertainment.yml
+    - import_tasks: ./communication.yml
+    - import_tasks: ./device.yml
+    - import_tasks: ./terminal.yml

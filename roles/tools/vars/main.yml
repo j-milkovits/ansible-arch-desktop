@@ -1,0 +1,22 @@
+tools_entertainment_package_list:
+  - obsidian
+  - spotify-launcher
+  - firefox-developer-edition
+  - gimp
+  - xournalpp
+  - vlc
+  - zotero
+
+tools_communication_package_list:
+  - discord
+  - whatsapp-for-linux
+
+tools_terminal_package_list:
+  - nnn
+  - btop
+  - grsync
+  - neofetch
+
+tools_device_package_list:
+  - insync
+  - bitwarden

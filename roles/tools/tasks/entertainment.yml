@@ -1,0 +1,4 @@
+- name: entertainment | install packages
+  ansible.builtin.command:
+    cmd: "yay -S --noconfirm {{ item }}"
+  with_items: "{{ tools_entertainment_package_list }}"
