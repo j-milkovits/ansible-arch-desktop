@@ -1,0 +1,16 @@
+- name: dotfiles | clone repository
+  ansible.builtin.git:
+    repo: 'https://github.com/j-milkovits/.dotfiles.git'
+    dest: '~/.dotfiles'
+    version: 'main'
+    accept_hostkey: true
+
+- name: dotfiles | make setup script executable
+  ansible.builtin.file:
+    path: '~/.dotfiles/setup'
+    mode: 'a+x'
+
+- name: dotfiles | execute setup script
+  ansible.builtin.command:
+    cmd: './setup'
+    chdir: '~/.dotfiles'
